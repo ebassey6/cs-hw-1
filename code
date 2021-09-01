@@ -1,0 +1,90 @@
+"""
+Georgia Institute of Technology - CS1301
+HW01 - Functions and Expressions
+"""
+
+#########################################
+
+"""
+Function Name: clubPoints()
+Parameters: N/A
+Returns: None
+"""
+def clubPoints():
+    number_of_clubs = int(input("How many clubs have you joined?"))
+    num_of_friends = int(input("How many friends have you gotten to join clubs?"))
+    print("You have won a total of " + str((number_of_clubs * 30)+(num_of_friends * 50) ))
+    pass
+clubPoints()
+
+#########################################
+
+"""
+Function Name: moveIn()
+Parameters: N/A
+Returns: None
+"""
+def moveIn():
+    numberOfFreshmen = int(input("How many freshmen do you plan to asist?"))
+    numberOfSophomores = int(input("How many sophomores do you plan to asist?"))
+    numberOfJuniors = int(input("How many juniors do you plan to asist?"))
+    totalCount = int(((numberOfFreshmen + numberOfSophomores  + numberOfJuniors)))
+    timeInHours = int(((numberOfFreshmen * 35)+(numberOfSophomores * 20)+(numberOfJuniors * 15))/60)
+    remainderSeconds = (int(((numberOfFreshmen * 35)+(numberOfSophomores * 20)+(numberOfJuniors * 15))%60))
+    numOfStudents = int((numberOfFreshmen + numberOfSophomores + numberOfJuniors))
+    print("It will take " + (str(timeInHours)) + " hours and " + str(remainderSeconds) + " minutes to help " + str(totalCount) + " students with move-in today")
+    pass
+moveIn()
+#########################################
+
+"""
+Function Name: tireArea()
+Parameters: N/A
+Returns: None
+"""
+def tireArea():
+    radius_of_bike = float(input("What is the radius of the tire?"))
+    area = float(3.14 * (radius_of_bike ** 2))
+    answer = str(round(area, 2))
+    print("The area of the tire is " + "%.2f" % area)
+    pass
+tireArea()
+#########################################
+
+"""
+Function Name: dining()
+Parameters: N/A
+Returns: None
+"""
+def dining():
+    panda = int(input("How many meals do you want to order from Panda Express?"))
+    rising = int(input("How many meals do you want to order from Rising Roll?"))
+    chick = int(input("How many meals do you want to order from Chick-fil-a?"))
+    tip = int(input("What percent would you like to tip?"))
+    food = int(((panda * 6)+(rising * 8)+(chick * 9)))
+    tipReturn = (float((tip/100) * food))
+    total = float((food + tipReturn))
+    
+    
+    print("You paid $" + (str(round(total, 2)) + " and tipped $" + str(round(tipReturn, 2))))
+    pass
+
+dining()
+#########################################
+
+"""
+Function Name: weeklyBudget()
+Parameters: N/A
+Returns: None
+"""
+def weeklyBudget():
+    
+    budget = int(input("How much is your budget this week?"))
+    percent = int(input("What percent do you want to save?"))
+    percent_conv = ((100-percent)/100)
+    total = float((budget * (percent_conv)-13.50-21.40))
+    print("You have $" +(str(round(total, 2))) + "left after savings and fees")
+
+    pass
+weeklyBudget()
+
